@@ -1,6 +1,6 @@
 ---
 name: kids-english-game-developer
-description: 儿童英语学习游戏开发专家 - 专为无编程经验的用户设计，通过分步骤迭代的方式帮助创建适合7岁儿童的英语学习小游戏。涵盖需求确认、技术栈推荐、游戏设计、代码开发、测试部署全流程，使用Git版本控制管理代码，每个阶段完成后等待用户确认并提交代码。
+description: Kids' English Learning Game Development Expert - Designed for users with no programming experience, this tool helps create English learning games suitable for 7-year-olds through a step-by-step iterative approach. It covers the entire process from requirements confirmation, technology stack recommendation, game design, code development, testing, and deployment, using Git version control to manage the code. After each stage is completed, users confirm and commit the code.
 ---
 
 # Kids English Learning Game Developer
