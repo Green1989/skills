@@ -2,7 +2,7 @@
 """
 Document Word Frequency Analyzer
 
-Analyzes word frequency in .doc, .docx, and .pdf documents.
+Analyzes word frequency in .doc, .docx, .pdf, .md, and .txt documents.
 Generates a formatted markdown report with statistics.
 """
 
@@ -12,6 +12,31 @@ import argparse
 from pathlib import Path
 from collections import Counter
 from typing import Dict, List, Tuple
+
+
+def extract_text_from_txt(txt_path: str) -> str:
+    """Extract text from .txt files."""
+    try:
+        with open(txt_path, 'r', encoding='utf-8') as f:
+            return f.read()
+    except UnicodeDecodeError:
+        # Try with other encodings if UTF-8 fails
+        for encoding in ['gbk', 'gb2312', 'utf-8-sig']:
+            try:
+                with open(txt_path, 'r', encoding=encoding) as f:
+                    return f.read()
+            except UnicodeDecodeError:
+                continue
+        raise ValueError(f"Unable to decode file with common encodings: {txt_path}")
+    except Exception as e:
+        print(f"Error reading TXT file: {e}")
+        sys.exit(1)
+
+
+def extract_text_from_md(md_path: str) -> str:
+    """Extract text from .md (markdown) files."""
+    # Markdown files are plain text, can use the same method as .txt
+    return extract_text_from_txt(md_path)
 
 
 def extract_text_from_docx(docx_path: str) -> str:
@@ -101,10 +126,12 @@ def extract_text(file_path: str) -> str:
         '.docx': extract_text_from_docx,
         '.pdf': extract_text_from_pdf,
         '.doc': extract_text_from_doc,
+        '.md': extract_text_from_md,
+        '.txt': extract_text_from_txt,
     }
 
     if suffix not in extractors:
-        raise ValueError(f"Unsupported file format: {suffix}. Supported formats: .doc, .docx, .pdf")
+        raise ValueError(f"Unsupported file format: {suffix}. Supported formats: .doc, .docx, .pdf, .md, .txt")
 
     return extractors[suffix](str(file_path))
 
@@ -131,13 +158,7 @@ def tokenize_text(text: str, language: str = 'mixed') -> List[str]:
         try:
             import jieba
 
-            # Add common multi-character phrases that jieba might split
-            # These are commonly searched terms in technical documents
-            custom_words = ['提交数据', '响应时间', '检验机构', '检测线', '返回数据']
-            for word in custom_words:
-                jieba.add_word(word, freq=10000, tag='nz')
-
-            # Use jieba.cut with cut_all=True to find all possible words
+            # Use jieba.cut with cut_all=False for precise tokenization
             chinese_words = jieba.cut(text, cut_all=True)
             # Filter: only keep words with 2+ Chinese characters
             for word in chinese_words:
@@ -310,7 +331,7 @@ pie
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Analyze word frequency in documents (.doc, .docx, .pdf)'
+        description='Analyze word frequency in documents (.doc, .docx, .pdf, .md, .txt)'
     )
     parser.add_argument(
         'file_path',
