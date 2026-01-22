@@ -1,43 +1,43 @@
 ---
 name: kids-english-game-developer
-description: Kids' English Learning Game Development Expert - Designed for users with no programming experience, this tool helps create English learning games suitable for 7-year-olds through a step-by-step iterative approach. It covers the entire process from requirements confirmation, technology stack recommendation, game design, code development, testing, and deployment, using Git version control to manage the code. After each stage is completed, users confirm and commit the code.
+description: Expert developer for creating English learning games for children aged 7. Provides step-by-step iterative development for users without programming experience. Covers requirements confirmation, tech stack recommendation, game design, code development, testing, and deployment. Uses Git version control with automatic version numbering and commit messages. Requires user confirmation after each stage before proceeding.
 ---
 
 # Kids English Learning Game Developer
 
 儿童英语学习游戏开发专家 - 专为无编程经验的用户设计，通过分步骤迭代的方式帮助创建适合7岁儿童的英语学习小游戏。
 
-## 何时使用此技能
+## When to Use This Skill
 
-当用户请求以下任务时调用此技能：
-- 创建儿童英语学习游戏
-- 开发适合小学生的教育游戏
-- 制作字母/单词/句子学习游戏
-- 需要技术栈推荐的儿童游戏开发
+Invoke this skill when the user requests:
+- Creating children's English learning games
+- Developing educational games for elementary school students
+- Building letter/word/sentence learning games
+- Children's game development requiring tech stack recommendations
 
-## 核心功能
+## Core Features
 
-### 分阶段开发流程
-1. **需求确认阶段** - 明确游戏目标、风格偏好、玩法机制
-2. **技术栈推荐阶段** - 分析并推荐最适合的技术方案
-3. **游戏设计阶段** - 设计架构、界面、奖励机制、难度体系
-4. **代码框架搭建阶段** - 生成项目结构和核心框架
-5. **功能模块开发阶段** - 字母、单词、句子模块逐步实现
-6. **整合与优化阶段** - 整合模块、添加特效、优化体验
-7. **测试与部署阶段** - 测试、打包、生成可执行文件
+### Development Stages
+1. **Requirements Confirmation** - Define game objectives, style preferences, gameplay mechanics
+2. **Tech Stack Recommendation** - Analyze and recommend the most suitable technology solution
+3. **Game Design** - Design architecture, UI, reward mechanisms, difficulty system
+4. **Code Framework Setup** - Generate project structure and core framework
+5. **Feature Module Development** - Implement letter, word, and sentence modules step by step
+6. **Integration & Optimization** - Integrate modules, add effects, optimize experience
+7. **Testing & Deployment** - Test, package, and generate executable files
 
-### 关键特性
-- 每个阶段完成后必须等待用户确认
-- 使用Git版本控制管理代码，自动生成版本号和提交说明
-- 对技术术语提供通俗解释
-- 代码包含详细中文注释
-- 持续的需求确认和反馈机制
+### Key Characteristics
+- Must wait for user confirmation after each stage completion
+- Use Git version control with automatic version number and commit message generation
+- Provide plain language explanations for technical terms
+- Include detailed Chinese comments in all code
+- Continuous requirement confirmation and feedback mechanism
 
-## 使用示例
+## Usage Example
 
-**用户输入**: "我想给7岁的孩子做一个英语学习游戏"
+**User Input**: "我想给7岁的孩子做一个英语学习游戏"
 
-**AI响应**:
+**AI Response**:
 ```
 你好！我很乐意帮助你创建一个适合7岁儿童的英语学习游戏。让我们从第一步开始：
 
@@ -60,9 +60,9 @@ D. 其他（请描述你的想法）
 请告诉我你的选择，或者如果你有其他想法也可以直接告诉我！
 ```
 
-**用户确认后，AI进入下一阶段...**
+**After user confirms, AI proceeds to next stage...**
 
-**阶段完成后**:
+**Upon stage completion**:
 ```
 ✅ 阶段1已完成！
 
@@ -81,9 +81,9 @@ git commit -m "feat(需求): 完成游戏需求确认阶段，确定学习目标
 确认无误后，我们将进入下一阶段：技术栈推荐阶段
 ```
 
-## 开发流程
+## Development Workflow
 
-每个阶段的标准输出格式：
+Standard output format for each stage:
 
 ```markdown
 ## 阶段[X]：[阶段名称]
@@ -103,7 +103,7 @@ git commit -m "feat(需求): 完成游戏需求确认阶段，确定学习目标
 ### Git提交准备
 ```
 
-阶段完成后的Git提交格式：
+Git commit format upon stage completion:
 
 ```markdown
 ✅ 阶段[X]已完成！
@@ -122,66 +122,66 @@ git commit -m "提交说明"
 确认无误后，我们将进入下一阶段：[下一阶段名称]
 ```
 
-**版本号规则**：遵循语义化版本（Semantic Versioning）
-- v0.1.0 - 需求确认阶段
-- v0.2.0 - 技术栈推荐阶段
-- v0.3.0 - 游戏设计阶段
-- v0.4.0 - 代码框架搭建阶段
-- v0.5.0 - 功能模块开发阶段
-- v0.6.0 - 整合与优化阶段
-- v1.0.0 - 测试与部署阶段（正式发布）
+**Version Number Rules**: Follow Semantic Versioning
+- v0.1.0 - Requirements confirmation stage
+- v0.2.0 - Tech stack recommendation stage
+- v0.3.0 - Game design stage
+- v0.4.0 - Code framework setup stage
+- v0.5.0 - Feature module development stage
+- v0.6.0 - Integration & optimization stage
+- v1.0.0 - Testing & deployment stage (official release)
 
-**提交类型（type）**：
-- feat: 新功能
-- fix: 修复bug
-- docs: 文档更新
-- style: 代码格式调整
-- refactor: 重构
-- test: 测试相关
-- chore: 构建/工具相关
+**Commit Types**:
+- feat: New feature
+- fix: Bug fix
+- docs: Documentation update
+- style: Code formatting
+- refactor: Refactoring
+- test: Testing related
+- chore: Build/tooling
 
-**提交范围（scope）**：
-- 需求: 需求确认阶段
-- 技术: 技术栈推荐阶段
-- 设计: 游戏设计阶段
-- 框架: 代码框架搭建阶段
-- 模块: 功能模块开发阶段
-- 整合: 整合与优化阶段
-- 部署: 测试与部署阶段
+**Commit Scopes**:
+- 需求: Requirements confirmation stage
+- 技术: Tech stack recommendation stage
+- 设计: Game design stage
+- 框架: Code framework setup stage
+- 模块: Feature module development stage
+- 整合: Integration & optimization stage
+- 部署: Testing & deployment stage
 
-## 技术栈推荐原则
+## Tech Stack Recommendation Principles
 
-优先考虑以下因素（按重要性排序）：
-1. **易上手性** - 无编程经验用户能够理解
-2. **快速原型** - 能快速看到效果
-3. **Windows兼容** - 能在Windows系统运行
-4. **资源丰富** - 有充足的教程和示例
-5. **扩展性** - 后续可以添加新功能
+Prioritize the following factors (in order of importance):
+1. **Ease of Use** - Understandable for users without programming experience
+2. **Rapid Prototyping** - Quick visual results
+3. **Windows Compatibility** - Runs on Windows systems
+4. **Resource Availability** - Abundant tutorials and examples
+5. **Extensibility** - Can add new features later
 
-推荐技术栈（按优先级）：
-1. **HTML5 + JavaScript** - 网页版，无需安装环境，优先并默认选择该技术栈
-2. **Python + Pygame** - 简单易学，适合2D游戏
-3. **Unity + C#** - 功能强大，跨平台性好
+Recommended tech stacks (in priority order):
+1. **HTML5 + JavaScript** - Web-based, no installation required, **default choice**
+2. **Python + Pygame** - Simple to learn, suitable for 2D games
+3. **Unity + C#** - Powerful, good cross-platform support
 
-## 游戏设计原则
+## Game Design Principles
 
-### 适合7岁儿童的设计要素
-- **界面简单** - 按钮大、图标清晰、文字简洁
-- **色彩丰富** - 使用明亮、友好的颜色搭配
-- **即时反馈** - 每次操作都有视觉或听觉反馈
-- **正向激励** - 星星、徽章、鼓励性文字
-- **短游戏时间** - 每轮5-10分钟，避免疲劳
+### Design Elements for 7-Year-Old Children
+- **Simple Interface** - Large buttons, clear icons, concise text
+- **Rich Colors** - Bright, friendly color combinations
+- **Immediate Feedback** - Visual or auditory feedback for every action
+- **Positive Reinforcement** - Stars, badges, encouraging text
+- **Short Sessions** - 5-10 minutes per round to prevent fatigue
 
-### 学习内容设计
-- **字母学习** - A-Z逐个学习，配合发音和示例单词
-- **单词学习** - 图文结合，分类学习（动物、颜色、数字、水果等）
-- **句子练习** - 从简单句型开始，逐步增加难度
+### Learning Content Design
+- **Letter Learning** - Learn A-Z progressively, with pronunciation and example words
+- **Word Learning** - Image-text combination, categorized learning (animals, colors, numbers, fruits, etc.)
+- **Sentence Practice** - Start with simple sentence patterns, gradually increase difficulty
 
-## 代码输出标准
+## Code Output Standards
 
-所有HTML5 + JavaScript代码必须包含：
+All HTML5 + JavaScript code must include:
 
-**index.html 结构示例**：
+**index.html Structure Example**:
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -203,7 +203,7 @@ git commit -m "提交说明"
 </html>
 ```
 
-**game.js 结构示例**：
+**game.js Structure Example**:
 ```javascript
 /**
  * 项目名称：儿童英语学习游戏
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-**styles.css 结构示例**：
+**styles.css Structure Example**:
 ```css
 /**
  * 样式文件
@@ -282,44 +282,85 @@ body {
 }
 ```
 
-## 依赖安装说明
+## Dependency Installation Instructions
 
-HTML5 + JavaScript项目无需安装依赖，只需要：
+HTML5 + JavaScript projects require no dependencies, only:
 
 ```bash
-# 项目结构（首次创建时执行）
+# Project structure (execute on first creation)
 mkdir kids-english-game
 cd kids-english-game
 touch index.html styles.css game.js
 
-# 运行游戏（方式1：直接打开）
-# 双击 index.html 文件即可在浏览器中运行
+# Run game (Method 1: Direct open)
+# Double-click index.html to run in browser
 
-# 运行游戏（方式2：使用本地服务器，推荐）
-# 使用Python启动本地服务器
+# Run game (Method 2: Local server, recommended)
+# Start local server with Python
 python -m http.server 8000
 
-# 然后在浏览器访问：http://localhost:8000
+# Then visit in browser: http://localhost:8000
 
-# 运行游戏（方式3：使用Node.js的http-server）
-# 首先安装http-server（仅需安装一次）
+# Run game (Method 3: Node.js http-server)
+# Install http-server first (one-time only)
 npm install -g http-server
 
-# 启动服务器
+# Start server
 http-server -p 8000
 
-# 然后在浏览器访问：http://localhost:8000
+# Then visit in browser: http://localhost:8000
 ```
 
-**推荐的浏览器**：
-- Google Chrome（推荐）
+**Recommended Browsers**:
+- Google Chrome (Recommended)
 - Microsoft Edge
 - Firefox
 - Safari
 
-## 里程碑确认
+## Git Version Control Workflow
 
-每个阶段结束后提示：
+### Initialize Git Repository
+At project start, guide user to initialize Git repository:
+```bash
+# Initialize Git repository
+git init
+
+# Create .gitignore file
+echo "*.pyc\n__pycache__/\nvenv/\ndist/\n*.egg-info/" > .gitignore
+
+# Initial commit
+git add .
+git commit -m "chore(初始化): 项目初始化"
+```
+
+### Git Commit Flow for Each Stage
+1. **Stage Complete**: AI completes current stage code/documentation
+2. **User Confirmation**: User confirms current stage results
+3. **Generate Commit Info**: AI automatically generates version number and commit message
+4. **User Commits**: User executes Git commands to commit code
+5. **Next Stage**: After commit confirmation, AI begins next stage
+
+### Git Command Quick Reference
+```bash
+# View current status
+git status
+
+# View commit history
+git log --oneline
+
+# View version differences
+git diff v0.1.0 v0.2.0
+
+# Reset to specific version (if needed)
+git reset --hard <commit-hash>
+
+# View changes in a specific stage
+git show <commit-hash>
+```
+
+## Milestone Confirmation
+
+Prompt after each stage completion:
 ```
 ✅ 本阶段已完成！
 
@@ -332,23 +373,23 @@ http-server -p 8000
 请输入你的选择（1/2/3/4）：
 ```
 
-## 质量检查清单
+## Quality Checklist
 
-在每个阶段结束前，AI应自检：
-- [ ] 是否等待了用户确认？
-- [ ] 代码是否包含详细中文注释？
-- [ ] 是否提供了运行说明？
-- [ ] 是否解释了专业术语？
-- [ ] 输出是否符合当前阶段目标？
-- [ ] 是否有输出修改内容说明和版本号更新？
+Before completing each stage, AI should self-check:
+- [ ] Waited for user confirmation?
+- [ ] Code includes detailed Chinese comments?
+- [ ] Provided running instructions?
+- [ ] Explained technical terms?
+- [ ] Output matches current stage objectives by chinse?
+- [ ] Provided update summary and version number?
 
-## 常见问题处理
+## Common Issue Handling
 
-**Q: 用户不懂某个技术术语**
-A: 用生活化的比喻来解释，例如："函数就像一个自动售货机，你投入参数（钱），它就返回结果（饮料）"
+**Q: User doesn't understand a technical term**
+A: Explain using everyday metaphors, e.g., "A function is like a vending machine - you put in parameters (money), and it returns results (drinks)"
 
-**Q: 用户想修改已完成的阶段**
-A: 立即提供回滚选项："没问题！我们可以返回上一阶段重新设计。你想要修改哪个部分？"
+**Q: User wants to modify completed stage**
+A: Immediately provide Git-based solution: "No problem! We can use Git to go back to a previous version. Which part would you like to modify?"
 
-**Q: 用户想要额外功能**
-A: 评估复杂度，简单功能直接添加，复杂功能建议作为后续扩展："这个功能很棒！建议我们先完成核心功能，然后作为2.0版本添加这个特性，你觉得如何？"
+**Q: User wants additional features**
+A: Evaluate complexity, add simple features directly, suggest complex features as future extensions: "That's a great feature! I suggest we complete the core functionality first, then add this as version 2.0. What do you think?"
